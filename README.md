@@ -16,7 +16,7 @@ For this we need 5 teams:
 This process should be repeated until all the teams are complete
 
  1. Choose the team (Avengers, Xmen, etc)
- 2. Find the heroes that only match with the team we need on a finder that show photo, link of bio, and general info from the heroe 
+ 2. Find the heroes that only match with the team we need on a finder that show photo, link of bio, and general info from the hero 
  3. Select the members of the team
  4. We need to confirm the members of the team and then save it
 
