@@ -36,9 +36,9 @@ https://developer.marvel.com/docs
 Start hacking.
 ## Qualification
 
-automated tests
-Connect API
-Use of framework
-How you select heroes (visual)
-Storage (how you storage your data) (database, localstorage, etc)
-Use of bootstrap, material design, etc.
+1. automated tests (20%)
+2. Connect API (30%)
+3. Use of framework (30%)
+4. How you select heroes (visual) (10%)
+5. Storage (how you storage your data) (database, localstorage, etc) (10%)
+6. Use of bootstrap, material design, etc. (bonus)
