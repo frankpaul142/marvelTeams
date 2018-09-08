@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                
+                <select class="form-control" name="comic" id="comic" ng-options="comic as comic.name for comic in data.comics" ng-model="data.search" ng-change="searchComic(true)"></select>
+
+                <input type="text" class="form-control" ng-model="data.searchHeroe" ng-blur="searchHeroe();" ng-if="data.heroes.length > 0">
+            
+                <div class="row">
+                    <table class="table" ng-if="!data.confirmTeam">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-2"> description </th>
+                                <th class="col-sm-4"> Image </th>
+                                <th class="col-sm-4"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="heroe in data.heroes">
+                                <td class="col-sm-4">
+                                    <label class="form-label col-sm-4" for="">{{heroe.description}}</label>
+                                </td>
+                                <td class="col-sm-4">
+                                    <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" alt="Flowers in Chania" width="200" height="300">
+                                </td>
+                                <td class="col-sm-4">
+                                    <button class="btn btn-success" ng-click="selectHeroe(heroe)" ng-disabled="heroe.selected"> Select </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table" ng-if="data.confirmTeam">
+                            <thead>
+                                <tr>
+                                    <th class="col-sm-2"> description </th>
+                                    <th class="col-sm-4"> Image </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="heroe in data.team">
+                                    <td class="col-sm-4">
+                                        <label class="form-label col-sm-4" for="">{{heroe.description}}</label>
+                                    </td>
+                                    <td class="col-sm-4">
+                                        <img src="{{heroe.image}}" alt="Flowers in Chania" width="200" height="300">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-success" ng-if="data.team.length > 0 && !data.confirmTeam" ng-click="confirmTeam()"> Confirm Team </button>
+            <button class="btn btn-success" ng-if="data.confirmTeam" ng-click="saveTeam()"> Save </button>
+            <button class="btn btn-success" ng-if="data.confirmTeam" ng-click="data.confirmTeam=false"> Return </button>
+            <button class="btn btn-success" ng-if="data.team.length > 0 && !data.confirmTeam" ng-click="cancelSaveTeam()"> Cancel </button>
+        </div>
+    </div>
+</div>
