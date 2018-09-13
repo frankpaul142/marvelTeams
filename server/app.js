@@ -31,11 +31,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', function (req, res) {
-  res.json({
-    message: 'hooray! welcome to our api!'
-  });
-});
+app.use('/', express['static'](__dirname + '/../client/app'));
+
+// app.get('/', function (req, res) {
+//   res.json({
+//     message: 'hooray! welcome to our api!'
+//   });
+// });
 
 app.use('/team', teamCtrl);
 
