@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Heroes
+  </h1>
+
+</div>
+<form name="myForm">
+  <h1>Selected: {{comicName}}</h1>
+  <select name="comicName" [(ngModel)]="comicName" (click)="findComicsByName()">
+    <option *ngFor="let co of comics" value="{{co.value}}">{{co.label}}</option>
+  </select>
+  <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="findCharacters()">Buscar</button>
+  <br/>
+  <select name="charter" [(ngModel)]="charter">
+    <option *ngFor="let ch of characters" value="{{ch}}">{{ch.name}}</option>
+  </select>
+
+</form>
