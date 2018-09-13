@@ -1,0 +1,35 @@
+{
+  "name": "papagayo-access-control",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel ./app -d ./build",
+    "build": "npm run clean && npm run build-server",
+    "start": "node ./build/lib/index",
+    "serve": "nodemon --exec babel-node app/lib/index"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "firebase-admin": "^5.12.1",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "morgan": "~1.9.0",
+    "node-env-file": "^0.1.8",
+    "request-promise": "^4.2.2",
+    "validy": "^0.1.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.5"
+  }
+}
